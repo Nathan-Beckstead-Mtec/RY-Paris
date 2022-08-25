@@ -1,0 +1,53 @@
+body{
+    width: 100vw;
+    margin:0;
+    overflow-x:hidden;
+}
+
+
+.margins{
+    padding-left: 6vw;
+    padding-right: 6vw;
+}
+
+.head{
+    background-color: #f1a536;
+    border-bottom: 2px solid #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.head>img{
+    margin-top: 1vw;
+    height: 7vw;
+}
+
+.links{
+    display: flex;
+    justify-items: space-between;
+    gap: 1em;
+}
+.links>a{
+    text-decoration: none;
+    color: #000;
+}
+
+.links>a:hover{
+    text-decoration: underline;
+    color:#444;
+}
+.links>a:active{
+    text-decoration: underline;
+    color:#444;
+}
+
+
+.hero{
+    position: relative;
+    height: 40vh;
+
+    background-image: url("images/hero-image.jpg");
+    background-size:cover;
+}
