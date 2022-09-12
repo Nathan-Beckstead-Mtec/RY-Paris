@@ -16,6 +16,8 @@ body{
 
 
 .head{
+	padding-left: 7.5vw;
+	padding-right: 7.5vw;
 	background-color: #f1a536;
 	padding-top: 5px;
 	padding-bottom: 3px;
@@ -67,18 +69,17 @@ body{
 	position: relative;
 	height: max(37.5vmax, 200px);
 	/* background-image: url("../images/hero-image.jpg"); moved to inline in html*/
-	background-size: 100vw max(37.5vmax, 200px);
+	background-size: cover;
 	background-position: center;
-	/* background-attachment: fixed; */
+	background-attachment: fixed;
 
 
 	display: flex;
 	align-items: flex-end;
 	justify-content: center;
-
-	
-
 }
+
+
 .hero>h1{
 	background-color: #fff;
 	padding: 10px;
@@ -104,9 +105,6 @@ body{
 .content{
 	padding-top: 2vw;
 	padding-bottom: 4vw;
-}
-.content>h2{
-	font-size: 2em;
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
@@ -147,7 +145,7 @@ body{
 	margin-top: -4px;
 
 	background-color: #fff;
-	border: 1px dashed #000;
+	/* border: 1px dashed #000; */
 	text-align: center;
 	font-size: 1em;
 }
@@ -366,12 +364,107 @@ body{
 
 
 
+.video-box{
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 100px;
+}
+.video-box>iframe{
+	width: 60vw;
+	border: 5px solid #f1a536;
+	border-radius: 5px;
+}
 
 
 
 
-@media (max-width: 767px) {
+@media (max-aspect-ratio: 3/4) {
 	body {
 		font-size: 32px;
+		background-color: #f1a536;
+		viewport-fit: cover;
 	}
+	body>*{
+		background-color: #fff;
+	}
+
+
+	.head{
+		/* background-color: #f1a536; */
+		padding-top: 0px;
+		/* padding-bottom: 3px; */
+		border-bottom: 4px solid #fff;
+		border-top: 2px solid #000;
+		padding-left: 0;
+		padding-right: 0;
+
+		padding-left: 7.5vw;
+		padding-right: 7.5vw;
+
+	}
+	
+	.head>img{
+		margin-top: 0px;
+		height: 100%;
+	}
+	.links{
+		flex-direction: column;
+		row-gap: 20px;
+		align-items: flex-end;
+		justify-content: space-between;
+
+
+	}
+	.head>.links>a{
+		font-size: 1.8em;
+		text-align: right;
+	}
+	.hero{
+		background-attachment: scroll;
+	}
+
+
+
+
+
+	.image-row{
+		/* display: flex; */
+		flex-wrap: nowrap;
+		flex-direction: column;
+
+		/* justify-content: space-between; */
+		/* gap:30px; */
+	
+		/* width: 100%; */
+		/* margin-top: 3vw; */
+		/* margin-bottom: 2vw; */
+		/* height:250px; */
+	}
+	
+	.image-row>.image-div{
+		width:100%;
+		/* flex-grow: 1; */
+	}
+	.image-row>.image-div>img{
+		/* width:100%; */
+		/* height: calc(100% - 2em - 12px); */
+		/* object-fit: cover; */
+	}
+	/* the highs of the .image-div breaks if the caption has to wrap */
+	.image-row>.image-div>p{
+		/* width:100%; */
+		/* padding-top: 10px; */
+		/* padding-bottom: 10px; */
+		/* margin: 0; */
+		/* margin-top: -4px; */
+	
+		/* background-color: #fff; */
+		/* border: 1px dashed #000; */
+		/* text-align: center; */
+		/* font-size: 1em; */
+	}
+
+
+
 }
